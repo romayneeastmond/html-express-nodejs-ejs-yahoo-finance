@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stock Scraper</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon-website.png" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-5 mt-5">
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th class="text-right">Price</th>
+                                <th class="text-center">Currency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% results.results.forEach(function(result) { %>
+                                <tr>
+                                    <td>
+                                        <%= result.symbol %>
+                                    </td>
+                                    <td>
+                                        <%= result.name %>
+                                    </td>
+                                    <td class="text-right">
+                                        <%= parseFloat(result.price).toFixed(2) %>
+                                    </td>
+                                    <td class="text-center">
+                                        <% if (result.name.indexOf(".TO") !==-1){ %>
+                                            CAD
+                                            <% } else{ %>
+                                                USD
+                                                <% } %>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="small">
+                    Last updated <%= results.lastUpdated %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+{
+  "symbols": [
+    {
+      "symbol": "BB",
+      "exchange": "TSX"
+    },
+    {
+      "symbol": "CCO",
+      "exchange": "TSX"
+    },
+    {
+      "symbol": "DML",
+      "exchange": "TSX"
+    },
+    {
+      "symbol": "LSPD",
+      "exchange": "TSX"
+    },
+    {
+      "symbol": "SHOP",
+      "exchange": "TSX"
+    },
+    {
+      "symbol": "AMZN"
+    },
+    {
+      "symbol": "NET"
+    },
+    {
+      "symbol": "COIN"
+    },
+    {
+      "symbol": "DKNG"
+    },
+    {
+      "symbol": "GRAB"
+    },
+    {
+      "symbol": "INMD"
+    },
+    {
+      "symbol": "PLTR"
+    },
+    {
+      "symbol": "RIVN"
+    },
+    {
+      "symbol": "SOFI"
+    },
+    {
+      "symbol": "UPST"
+    },
+    {
+      "symbol": "VTI"
+    },
+    {
+      "symbol": "VTNR"
+    },
+    {
+      "symbol": "AMD"
+    },
+    {
+      "symbol": "GOOGL"
+    },
+    {
+      "symbol": "AAPL"
+    },
+    {
+      "symbol": "META"
+    },
+    {
+      "symbol": "MSFT"
+    },
+    {
+      "symbol": "NVDA"
+    },
+    {
+      "symbol": "CPS"
+    },
+    {
+      "symbol": "DOCS"
+    },
+    {
+      "symbol": "FSLY"
+    },
+    {
+      "symbol": "LICY"
+    },
+    {
+      "symbol": "S"
+    },
+    {
+      "symbol": "RKLB"
+    },
+    {
+      "symbol": "SGH"
+    },
+    {
+      "symbol": "SNAP"
+    },
+    {
+      "symbol": "SNOW"
+    },
+    {
+      "symbol": "TSM"
+    },
+    {
+      "symbol": "DIS"
+    },
+    {
+      "symbol": "WBD"
+    }
+  ]
+}
