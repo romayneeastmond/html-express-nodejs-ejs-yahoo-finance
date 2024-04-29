@@ -16,13 +16,14 @@
     <div class="container">
         <div class="row mb-5 mt-5">
             <div class="col">
-                <div class="table-responsive">
+                <div class="table-responsive-md">
                     <table class="table table-bordered table-striped table-hover table-sm">
                         <thead class="thead-light">
                             <tr>
                                 <th>Symbol</th>
                                 <th>Name</th>
                                 <th class="text-right">Price</th>
+                                <th class="text-right">ATH</th>
                                 <th class="text-center">Currency</th>
                             </tr>
                         </thead>
@@ -37,6 +38,9 @@
                                     </td>
                                     <td class="text-right">
                                         <%= parseFloat(result.price).toFixed(2) %>
+                                    </td>
+                                    <td class="text-right">
+                                        <%= parseFloat(result.range).toFixed(2) %>
                                     </td>
                                     <td class="text-center">
                                         <% if (result.name.indexOf(".TO") !==-1){ %>

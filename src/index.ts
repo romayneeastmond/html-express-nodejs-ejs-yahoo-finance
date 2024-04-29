@@ -38,6 +38,14 @@ const StocksService = require('../src/api/Stocks/StocksService');
         res.json(symbols);
     });
 
+    router.post('/submit', function (req, res) {
+        if (req.body && req.body.results) {
+            fs.writeFileSync('./src/data/results.json', req.body.results);
+        }
+
+        res.send('Done');
+    });
+
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(express.static('public'));

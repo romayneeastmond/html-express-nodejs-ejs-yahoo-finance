@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 class StocksService {
-    getStockPriceServerlessFunctionUrl = 'https://YOUR_FUNCTION_NAME.azurewebsites.net/api/GetStockPrice';
+    getStockPriceServerlessFunctionUrl = 'https://dev-nodejs-stocks-loader.azurewebsites.net/api/GetStockPrice';
 
     get = async (data) => {
         var url = `${this.getStockPriceServerlessFunctionUrl}?symbol=${data.symbol}`;
@@ -26,11 +26,20 @@ class StocksService {
         };
 
         for (const record of records.symbols) {
-            var result = await this.get(record);
+            try {
+                var result = await this.get(record);
 
-            console.log(result);
+                if (this.validate(result)) {
+                    console.log(result);
 
-            results.results.push(result);
+                    results.results.push(result);
+                } else {
+                    console.log(record.symbol + ' ' + JSON.stringify(result) + ' Unexpected JSON format');
+                }
+            }
+            catch (err) {
+                console.log(record.symbol + ' ' + err.message);
+            }
         }
 
         if (results.results.length === 0) {
@@ -38,6 +47,16 @@ class StocksService {
         }
 
         return results;
+    }
+
+    validate = (result) => {
+        try {
+            JSON.parse(result);
+        } catch (e) {
+            return false;
+        }
+
+        return true;
     }
 }
 
