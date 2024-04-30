@@ -29,13 +29,9 @@ class StocksService {
             try {
                 var result = await this.get(record);
 
-                if (this.validate(result)) {
-                    console.log(result);
+                console.log(result);
 
-                    results.results.push(result);
-                } else {
-                    console.log(record.symbol + ' ' + JSON.stringify(result) + ' Unexpected JSON format');
-                }
+                results.results.push(result);
             }
             catch (err) {
                 console.log(record.symbol + ' ' + err.message);
@@ -47,16 +43,6 @@ class StocksService {
         }
 
         return results;
-    }
-
-    validate = (result) => {
-        try {
-            JSON.parse(result);
-        } catch (e) {
-            return false;
-        }
-
-        return true;
     }
 }
 
