@@ -75,21 +75,3 @@ Google Apps Script code can be set on a [trigger system](https://developers.goog
 ## Copyright and Ownership
 
 All terms used are copyright to their original authors.
-
-## Live Demo
-
-Live demo hosted in Microsoft Azure.
-
-HTML
-
-https://dev-nodejs-stock-symbols-re01.azurewebsites.net/
-
-Symbols
-
-https://dev-nodejs-stock-symbols-re01.azurewebsites.net/symbols
-
-Results
-
-https://dev-nodejs-stock-symbols-re01.azurewebsites.net/results
-
-Azure F1 instances are :snowflake: ice cold. That first load will need some :sun_with_face: warming up.
